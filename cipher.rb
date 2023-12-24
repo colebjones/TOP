@@ -6,6 +6,8 @@ IGNORE = [" ", ".", "!", "?", "-", ";", "'", "`", "[", "]", "|", "\\", "<",
             .map{|x| [x,true]}
             .to_h
 
+#message = string to encrypt
+#shift = positive number to shift message down the alphabet
 def caesar_cipher(message, shift) 
     #limit shift to be at most one wrap around through the alphabet via remainder of 26
     shift > 26 ? shift = shift%26 : false
